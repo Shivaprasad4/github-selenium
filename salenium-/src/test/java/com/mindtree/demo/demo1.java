@@ -1,3 +1,4 @@
+//navigate function
 package com.mindtree.demo;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
