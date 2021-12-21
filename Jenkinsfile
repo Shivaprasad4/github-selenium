@@ -1,5 +1,5 @@
 pipeline{
-  agent{ label 'windows'}
+  agent{ label 'linux'}
   stages{
     stage('Hello from github'){
 	  steps{
