@@ -1,11 +1,25 @@
 pipeline{
   agent any
+  tools{
+     maven 'M3'
+	 }
   stages{
-    stage('Hello from github'){
+    stage('checkout'){
 	  steps{
-	    echo "Hello World!"
+	    git "https://github.com/Shivaprasad4/github-selenium.git"
 	  }
 	}
-  }
+	stage('Build'){
+	    steps{
+		bat 'mvn clean install'
+        }
+      }
+	  stage('Test'){
+	  steps{
+	    bat 'mvn test'
+		}
+	}
+	}
 }
+	  
    
